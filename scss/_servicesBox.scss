@@ -1,0 +1,25 @@
+.servicesBox {
+    width: 100%;
+    height: 100%;
+    &__head {
+        width: 100%;
+        @extend .row;
+        align-items: stretch;
+        margin: 0 0 2rem 0;
+        &Elem {
+            &._search {
+                width: 21rem;
+            }
+        }
+        &Elem+&Elem {
+            margin-left: 1rem;
+        }
+        &Elem+&Elem._continue {
+            margin-left: auto;
+        }
+    }
+    &__description {
+        width: 80rem;
+        margin: 0 0 2rem 0;
+    }
+}

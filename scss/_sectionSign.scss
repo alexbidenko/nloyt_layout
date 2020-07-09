@@ -1,0 +1,110 @@
+.sectionSign {
+    width: 100%;
+    @extend .row;
+    align-items: stretch;
+    &__item {
+        width: 50%;
+        min-height: 100vh;
+        position: relative;
+        &._content {
+            padding: 2.7rem 8rem 11rem 19rem;
+            @extend .col;
+            align-items: center;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &__logo {
+        position: absolute;
+        top: 2.7rem;
+        left: 2.7rem;
+        width: 6rem;
+    }
+    &__nav {
+        position: absolute;
+        top: 2.7rem;
+        right: 2.7rem;
+        @extend .row;
+        align-items: center;
+    }
+    &__link {
+        font-size: 1.35rem;
+        font-family: 'Regular';
+        line-height: 1.3;
+        text-decoration: underline;
+        color: $colorGreen;
+        margin: 0 2.3rem 0 0;
+    }
+    &__language {
+        width: 2.5rem;
+        cursor: pointer;
+    }
+    &__content {
+        width: 100%;
+        height: 100%;
+        @extend .col;
+    }
+    &._login &__content {
+        justify-content: space-between;
+    }
+    &__box {
+        width: 100%;
+    }
+    &._login &__box {
+        margin-top: -5rem;
+    }
+    &__name {
+        width: 100%;
+        margin: 0 0 7rem 0;
+    }
+    &__title {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    &__title+&__form {
+        margin-top: 3rem;
+    }
+    &__subTitle {
+        width: 100%;
+        margin: 0 0 3rem 0;
+        &._fix {
+            width: 27rem;
+        }
+    }
+    &__form {
+        width: 100%;
+        &El {
+            width: 100%;
+            &._fix {
+                width: 21rem;
+            }
+            &._confirm {
+                margin-bottom: 3rem;
+            }
+        }
+        &El+&El {
+            margin-top: 1rem;
+        }
+        &El+&El._confirm {
+            margin-top: 3rem;
+        }
+    }
+    &__info {
+        font-size: 1.4rem;
+        font-family: 'Regular';
+        color: #000;
+        margin: auto 0 0 0;
+    }
+    &._login &__info {
+        margin: 0;
+    }
+    &__again {
+        margin-top: 3rem;
+        font-size: 1rem;
+        color: $colorGreen;
+        font-family: 'Light';
+    }
+}

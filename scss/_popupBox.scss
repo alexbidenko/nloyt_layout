@@ -1,0 +1,110 @@
+.popupBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    @extend .col;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    &__inner {
+        width: 60rem;
+        padding: 3rem 4rem;
+        background: #fff;
+        position: relative;
+        @extend .col;
+    }
+    &._create &__inner {
+        width: 80rem;
+    }
+    &__close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 2rem;
+        cursor: pointer;
+        z-index: 2;
+    }
+    &__title {
+        width: 100%;
+        margin: 0 0 1.5rem 0;
+    }
+    &__subTitle {
+        width: 100%;
+        margin: 0 0 3rem 0;
+    }
+    &__form {
+        width: 100%;
+        @extend .row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 5rem 0;
+        &El {
+            margin-bottom: 2rem;
+            width: 100%;
+            &._short {
+                width: 31%;
+            }
+            &._normal {
+                width: 65.5%;
+            }
+            &._day {
+                width: 32%;
+                margin-bottom: .75rem;
+            }
+            &._photo {
+                height: 17rem;
+            }
+            &._half {
+                width: 48%;
+            }
+        }
+        &Col &El {
+            margin-bottom: 1rem;
+        }
+        &Day {
+            width: 100%;
+            height: 3.5rem;
+            padding: 0 2rem;
+            background: #fff;
+            box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.1);
+            border-radius: .4rem;
+            font-size: 1.3rem;
+            color: #000;
+            font-family: 'Bold';
+            @extend .row;
+            align-items: center;
+        }
+        &Col {
+            width: 24%;
+            @extend .col;
+            &._long {
+                width: 49%;
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+        }
+        &Photo {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            background: #fff;
+            box-shadow: 0 0 .8rem rgba(0, 0, 0, 0.1);
+            border-radius: .4rem;
+            font-size: 1.1rem;
+            color: #aaa;
+            font-family: 'Light';
+            @extend .col;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            &Input {
+                display: none;
+            }
+        }
+    }
+    &__button {
+        width: 31%;
+        margin: 0 0 0 auto;
+    }
+}
